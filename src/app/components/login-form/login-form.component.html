@@ -9,7 +9,7 @@
   <div>
     <mat-form-field appearance="fill">
       <mat-label>Password</mat-label>
-      <input matInput type="text" placeholder="Password" formControlName="password" required>
+      <input matInput type="password" placeholder="Password" formControlName="password" required>
       <mat-error *ngIf="loginForm.get('password')!.invalid">password is invalid</mat-error>
     </mat-form-field>
   </div>
