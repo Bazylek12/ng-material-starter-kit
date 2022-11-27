@@ -7,6 +7,7 @@ import {HolidaysListComponent} from './components/holidays-list/holidays-list.co
 import {CheckboxCategoryListComponent} from './components/checkbox-category-list/checkbox-category-list.component';
 import {CategoriesMenuComponent} from './components/categories-menu/categories-menu.component';
 import {ProductSearchComponent} from './components/product-search/product-search.component';
+import {ProductFormComponent} from './components/product-form/product-form.component';
 import {ProductListComponentModule} from './components/product-list/product-list.component-module';
 import {ProductsServiceModule} from './services/products.service-module';
 import {CategoryListComponentModule} from './components/category-list/category-list.component-module';
@@ -20,6 +21,7 @@ import {
 } from './components/checkbox-category-list/checkbox-category-list.component-module';
 import {CategoriesMenuComponentModule} from './components/categories-menu/categories-menu.component-module';
 import {ProductSearchComponentModule} from './components/product-search/product-search.component-module';
+import {ProductFormComponentModule} from './components/product-form/product-form.component-module';
 
 @NgModule({
   imports: [RouterModule.forRoot([{path: 'products', component: ProductListComponent}, {
@@ -31,10 +33,10 @@ import {ProductSearchComponentModule} from './components/product-search/product-
   }, {path: 'checkbox-categories', component: CheckboxCategoryListComponent}, {
     path: 'categories-menu',
     component: CategoriesMenuComponent
-  }, {
-    path: 'product-search',
-    component: ProductSearchComponent
-  }]), ProductListComponentModule, ProductsServiceModule, CategoryListComponentModule, CategoriesServiceModule, CryptoListComponentModule, CryptosServiceModule, HolidaysListComponentModule, HolidaysServiceModule, CheckboxCategoryListComponentModule, CategoriesMenuComponentModule, ProductSearchComponentModule],
+  }, {path: 'product-search', component: ProductSearchComponent}, {
+    path: 'create-product',
+    component: ProductFormComponent
+  }]), ProductListComponentModule, ProductsServiceModule, CategoryListComponentModule, CategoriesServiceModule, CryptoListComponentModule, CryptosServiceModule, HolidaysListComponentModule, HolidaysServiceModule, CheckboxCategoryListComponentModule, CategoriesMenuComponentModule, ProductSearchComponentModule, ProductFormComponentModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule {
