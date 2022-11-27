@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
 import { Observable } from 'rxjs';
 import { CategoriesService } from '../../services/categories.service';
+import {ProductModel} from "../../models/product.model";
 
 @Component({
   selector: 'app-categories-menu',
@@ -10,7 +11,7 @@ import { CategoriesService } from '../../services/categories.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CategoriesMenuComponent {
-  readonly menu$: Observable<string[]> = this._categoriesService.getCategories();
+  readonly menu$: Observable<ProductModel[]> = this._categoriesService.getCategories();
 
   constructor(private _categoriesService: CategoriesService) {
   }
