@@ -1,0 +1,12 @@
+<mat-card class="w-25 text-center">
+  <mat-card-title class="text-bg-warning">Are you bored?</mat-card-title>
+  <mat-card-content>
+    <ng-container *ngIf="data$ | async as item"><h1 class="text-info text-decoration-underline">Check our random activity proposition!</h1>
+      <ul class="text-danger text-opacity-75">
+        <li>Activity: {{ item.activity }}</li>
+        <li>Activity type: {{ item.type }}</li>
+        <li>Number of additional participants: {{item.participants }}</li>
+      </ul>
+    </ng-container>
+  </mat-card-content>
+</mat-card>
